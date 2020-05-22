@@ -1,0 +1,38 @@
+#!/bin/bash
+
+
+# create directories/file system for input & decode output
+hdfs dfs -mkdir /project/CVDP/CVDP${env}/Warehouse/Staging/ActiveDriveAssist/
+hdfs dfs -mkdir /project/CVDP/CVDP${env}/Warehouse/Staging/ActiveDriveAssist/Inprocess
+hdfs dfs -mkdir /project/CVDP/CVDP${env}/Warehouse/Staging/ActiveDriveAssist/Output
+hdfs dfs -mkdir /project/CVDP/CVDP${env}/Warehouse/Staging/ActiveDriveAssist/nscvz69_ada_nondup_st_hte
+hdfs dfs -mkdir /project/CVDP/CVDP${env}/Warehouse/Staging/ActiveDriveAssist/nscve69_ada_temp_dup_st_hte
+hdfs dfs -mkdir /project/CVDP/CVDP${env}/Warehouse/Staging/ActiveDriveAssist/nscvs69_ada_st_hte
+hdfs dfs -mkdir /project/CVDP/CVDP${env}/Warehouse/Staging/ActiveDriveAssist/nscvz70_ada_inp_nondup_st_hte
+hdfs dfs -mkdir /project/CVDP/CVDP${env}/Warehouse/Staging/ActiveDriveAssist/nscve70_ada_inp_temp_dup_st_hte
+hdfs dfs -mkdir /project/CVDP/CVDP${env}/Warehouse/Staging/ActiveDriveAssist/nscvs70_ada_inp_st_hte
+
+#create directories/file system for Public and Secure
+
+hdfs dfs -mkdir  /project/CVDP/CVDP${env}/Warehouse/Secure/ActiveDriveAssist/
+hdfs dfs -mkdir  /project/CVDP/CVDP${env}/Warehouse/Public/ActiveDriveAssist/
+hdfs dfs -mkdir  /project/CVDP/CVDP${env}/Warehouse/Secure/ActiveDriveAssist/nscvc69_ada_sec_hte
+hdfs dfs -mkdir  /project/CVDP/CVDP${env}/Warehouse/Public/ActiveDriveAssist/nscvd69_ada_dup_hte
+hdfs dfs -mkdir  /project/CVDP/CVDP${env}/Warehouse/Secure/ActiveDriveAssist/nscvc70_ada_inp_sec_hte
+hdfs dfs -mkdir  /project/CVDP/CVDP${env}/Warehouse/Public/ActiveDriveAssist/nscvd70_ada_inp_dup_hte
+
+# create directories/file system for archive files
+
+hdfs dfs -mkdir /project/CVDP/CVDP${env}/Archive/ActiveDriveAssist/
+hdfs dfs -mkdir /project/CVDP/CVDP${env}/Archive/ActiveDriveAssist/Completed
+hdfs dfs -mkdir /project/CVDP/CVDP${env}/Archive/ActiveDriveAssist/Failure
+
+#set the permissions for Master tables
+
+hdfs dfs -chmod 700 /project/CVDP/CVDP${env}/Warehouse/Secure/ActiveDriveAssist/
+hdfs dfs -chmod 700 /project/CVDP/CVDP${env}/Warehouse/Public/ActiveDriveAssist/
+hdfs dfs -chmod 700 /project/CVDP/CVDP${env}/Warehouse/Secure/ActiveDriveAssist/nscvc69_ada_sec_hte
+hdfs dfs -chmod 700 /project/CVDP/CVDP${env}/Warehouse/Public/ActiveDriveAssist/nscvd69_ada_dup_hte
+hdfs dfs -chmod 700 /project/CVDP/CVDP${env}/Warehouse/Secure/ActiveDriveAssist/nscvc70_ada_inp_sec_hte
+hdfs dfs -chmod 700 /project/CVDP/CVDP${env}/Warehouse/Public/ActiveDriveAssist/nscvd70_ada_inp_dup_hte
+
